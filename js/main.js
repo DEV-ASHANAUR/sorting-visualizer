@@ -51,7 +51,7 @@ function createNewBar(bars = 20) {
     array = [];
     //create random height for each bars and store this array
     for (let i = 0; i < bars; i++) {
-        array.push(Math.floor(Math.random() * 240) + 10);
+        array.push(Math.floor(Math.random() * 190) + 10);
     }
     //get bars parent
     const barsDIV = document.getElementById("bars");
