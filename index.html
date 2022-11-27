@@ -24,12 +24,12 @@
         <div class="sidebar" id="sidebar">
             <div class="s_item" style="margin-bottom: 15px;margin-top: 20px;">
                 <span>Algorithms</span>
-                <select name="" id="">
-                    <option value="Bubble">Bubble Sort</option>
-                    <option value="Insertion">Insertion Sort</option>
-                    <option value="Selection">Selection Sort</option>
-                    <option value="Merge">Merge Sort</option>
-                    <option value="Quick">Quick Sort</option>
+                <select id="algoSelected" onchange="catchValue()">
+                    <option value="bubble">Bubble Sort</option>
+                    <option value="insertion">Insertion Sort</option>
+                    <option value="selection">Selection Sort</option>
+                    <option value="merge">Merge Sort</option>
+                    <option value="quick">Quick Sort</option>
                 </select>
             </div>
             <div class="s_item">
@@ -96,6 +96,8 @@
 
     <!-- script here -->
     <script src="js/main.js"></script>
+    <script src="js/bubbleSort.js"></script>
+    <script src="js/start.js"></script>
 </body>
 
 </html>

@@ -256,6 +256,7 @@ body {
     margin: 0 auto;
     height: 80vh;
     border-bottom: 5px solid #664AFF;
+    transition: 2s all ease;
 }
 
 .bar-item {
@@ -269,6 +270,7 @@ body {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     font-size: 0.7rem;
+    transition: 0.1s all ease;
 }
 
 .toggle {

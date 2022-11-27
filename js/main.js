@@ -28,11 +28,30 @@ arrSize.addEventListener("input", () => {
     createNewBar(parseInt(arrSize.value));
 });
 
+//element swap
+const swapElement = (n1,n2) =>{
+    let temp = n1.style.height;
+    n1.style.height = n2.style.height;
+    n2.style.height = temp;
+}
+
+// wait state 
+const waitState = (milisecond)=>{
+    return new Promise(resolve =>{
+        setTimeout(()=>{
+            resolve("");
+        },milisecond)
+    })
+}
+//set delay; it's default for 260ms
+let delay = 260;
+
 // spreed slider
 const spreedSlideValue = document.querySelector(".spreedSlider");
 const spreedSlider = document.getElementById("spreed");
 spreedSlider.oninput = (() => {
     let value = spreedSlider.value;
+    delay = 320 - parseInt(value);
     spreedSlideValue.textContent = value;
     spreedSlideValue.style.left = "50%";
     spreedSlideValue.classList.add("show");
@@ -80,4 +99,14 @@ const random = document.getElementById("randomSize");
 random.addEventListener("click",()=>{
     //call the bar creator function
     createNewBar(parseInt(arrSize.value));
-})
+});
+
+//catch selected sort algorithms for sorting
+let selectedAlgo;
+
+function  catchValue() {
+    selectedAlgo = document.getElementById("algoSelected").value;
+}
+//when the page will load first time auto set the selected value
+catchValue();
+
