@@ -1,5 +1,6 @@
 //menu toggle
-const togglebar = document.addEventListener("click",()=>{
+const togglebar = document.getElementById("togglebar");
+togglebar.addEventListener("click",()=>{
     const sidebar = document.getElementById("sidebar");
     sidebar.classList.toggle("mobile");
 })
