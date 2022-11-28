@@ -1,18 +1,39 @@
 //start button 
 const start = document.getElementById("startBtn");
 
+//pause button 
+const pause = document.getElementById("pauseBtn");
+
+pause.addEventListener("click",()=>{
+    resetBtn();
+    location.reload();
+})
+
+const resetBtn = () =>{
+    start.style.display = "block";
+    pause.style.display = "none";
+}
+
 //this enevt will run when we click the start button
-start.addEventListener("click",()=>{
+start.addEventListener("click",async()=>{
+    start.style.display = "none";
+    pause.style.display = "block";
+    disable();
+
     // console.log({selectedAlgo})
     switch(selectedAlgo){
         case "bubble":
-            bubbleSort();
+            await bubbleSort();
+            enable();
+            resetBtn();
             break;
         case "insertion":
             console.log("insertion");
             break;
         case "selection":
-            console.log("selection");
+            await selectionSort();
+            enable();
+            resetBtn();
             break;
         case "merge":
             console.log("merge");

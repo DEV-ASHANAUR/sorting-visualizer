@@ -32,7 +32,9 @@ arrSize.addEventListener("input", () => {
 const swapElement = (n1,n2) =>{
     let temp = n1.style.height;
     n1.style.height = n2.style.height;
+    n1.innerText = parseInt(n2.style.height);
     n2.style.height = temp;
+    n2.innerText = parseInt(temp);
 }
 
 // wait state 
@@ -49,6 +51,7 @@ let delay = 260;
 // spreed slider
 const spreedSlideValue = document.querySelector(".spreedSlider");
 const spreedSlider = document.getElementById("spreed");
+
 spreedSlider.oninput = (() => {
     let value = spreedSlider.value;
     delay = 320 - parseInt(value);
@@ -109,4 +112,16 @@ function  catchValue() {
 }
 //when the page will load first time auto set the selected value
 catchValue();
+
+const disable = () =>{
+    document.getElementById("algoSelected").disabled = true;
+    document.getElementById("arrSize").disabled = true;
+    document.getElementById("randomSize").disabled = true;
+}
+
+const enable = () =>{
+    document.getElementById("algoSelected").disabled = false;
+    document.getElementById("arrSize").disabled = false;
+    document.getElementById("randomSize").disabled = false;
+}
 

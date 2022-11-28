@@ -202,6 +202,18 @@ body {
     background-color: #fff;
     border: 2px solid rgb(236, 31, 31);
 }
+.randomBtn:disabled{
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+#arrSize:disabled{
+    cursor: not-allowed;
+}
+
+#algoSelected:disabled{
+    cursor: not-allowed;
+}
 
 .startBtn {
     width: 60px;
