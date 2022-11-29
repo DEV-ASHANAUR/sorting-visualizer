@@ -19,8 +19,6 @@ start.addEventListener("click",async()=>{
     start.style.display = "none";
     pause.style.display = "block";
     disable();
-
-    // console.log({selectedAlgo})
     switch(selectedAlgo){
         case "bubble":
             await bubbleSort();
@@ -28,7 +26,9 @@ start.addEventListener("click",async()=>{
             resetBtn();
             break;
         case "insertion":
-            console.log("insertion");
+            await insertionSort();
+            enable();
+            resetBtn();
             break;
         case "selection":
             await selectionSort();
