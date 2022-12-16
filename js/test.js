@@ -1,4 +1,4 @@
-array = [12,7,14,8,10,3];
+// array = [12,7,14,8,10,3];
 
 // function selectionSort(arr){
 //     for (let i = 0; i < array.length; i++) {
@@ -18,18 +18,29 @@ array = [12,7,14,8,10,3];
 
 // console.log(array)
 
-function insertionSort(arr){
-    for (let i = 1; i < arr.length; i++) {
-        const key = arr[i];
-        let j = i - 1;
-        while(j>=0 && arr[j] > key){
-            arr[j+1] = arr[j];
-            j = j-1;
-        }
-        arr[j+1] = key;
-    }
+// function insertionSort(arr){
+//     for (let i = 1; i < arr.length; i++) {
+//         const key = arr[i];
+//         let j = i - 1;
+//         while(j>=0 && arr[j] > key){
+//             arr[j+1] = arr[j];
+//             j = j-1;
+//         }
+//         arr[j+1] = key;
+//     }
+// }
+
+// insertionSort(array);
+
+// console.log(array)
+
+const arr = [
+    0=>[1,2],
+    1=>[2],
+    2=>[0,3],
+    3=>[3],
+];
+
+for (const i of arr[3].values()) {
+    console.log(i);
 }
-
-insertionSort(array);
-
-console.log(array)

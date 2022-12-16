@@ -6,25 +6,25 @@ const selectionSort = async () => {
 
         barItems[i].style.background = "blue";
 
-        for (let j = i+1; j < array.length; j++) {
+        for (let j = i + 1; j < array.length; j++) {
             barItems[j].style.background = "purple";
             await waitState(delay);
-            if(parseInt(barItems[j].style.height) < parseInt(barItems[min].style.height)){
-                
-                if(min !== i){
+            if (parseInt(barItems[j].style.height) < parseInt(barItems[min].style.height)) {
+
+                if (min !== i) {
                     barItems[min].style.background = "red"
                 }
                 min = j;
 
-            }else{
+            } else {
                 barItems[j].style.background = "red";
             }
-            
+
         }
         await waitState(delay);
-        swapElement(barItems[min],barItems[i]);
+        swapElement(barItems[min], barItems[i]);
         barItems[min].style.background = "red";
         barItems[i].style.background = "green";
-        
+
     }
 }
