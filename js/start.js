@@ -36,7 +36,9 @@ start.addEventListener("click",async()=>{
             resetBtn();
             break;
         case "merge":
-            console.log("merge");
+            await mergeSortDriver();
+            enable();
+            resetBtn();
             break;
         case "quick":
             console.log("quick");
