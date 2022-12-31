@@ -104,14 +104,57 @@ random.addEventListener("click",()=>{
     createNewBar(parseInt(arrSize.value));
 });
 
+const descriptionLoad = (type) =>{
+    switch(type){
+        case "bubble":
+            document.querySelector(".bubble-description").style.display = "flex";
+            document.querySelector(".insertion-description").style.display = "none";
+            document.querySelector(".selection-description").style.display = "none";
+            document.querySelector(".merge-description").style.display = "none";
+            document.querySelector(".quick-description").style.display = "none";
+            break;
+        case "insertion":
+            document.querySelector(".bubble-description").style.display = "none";
+            document.querySelector(".insertion-description").style.display = "flex";
+            document.querySelector(".selection-description").style.display = "none";
+            document.querySelector(".merge-description").style.display = "none";
+            document.querySelector(".quick-description").style.display = "none";
+            break;
+        case "selection":
+            document.querySelector(".bubble-description").style.display = "none";
+            document.querySelector(".insertion-description").style.display = "none";
+            document.querySelector(".selection-description").style.display = "flex";
+            document.querySelector(".merge-description").style.display = "none";
+            document.querySelector(".quick-description").style.display = "none";
+            break;
+        case "merge":
+            document.querySelector(".bubble-description").style.display = "none";
+            document.querySelector(".insertion-description").style.display = "none";
+            document.querySelector(".selection-description").style.display = "none";
+            document.querySelector(".merge-description").style.display = "flex";
+            document.querySelector(".quick-description").style.display = "none";
+            break;
+        case "quick":
+            document.querySelector(".bubble-description").style.display = "none";
+            document.querySelector(".insertion-description").style.display = "none";
+            document.querySelector(".selection-description").style.display = "none";
+            document.querySelector(".merge-description").style.display = "none";
+            document.querySelector(".quick-description").style.display = "flex";
+            break;
+    }
+}
+
 //catch selected sort algorithms for sorting
 let selectedAlgo;
 
 function  catchValue() {
     selectedAlgo = document.getElementById("algoSelected").value;
+    descriptionLoad(selectedAlgo);
 }
 //when the page will load first time auto set the selected value
 catchValue();
+
+
 
 const disable = () =>{
     document.getElementById("algoSelected").disabled = true;

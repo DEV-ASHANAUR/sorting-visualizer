@@ -78,20 +78,101 @@
                 <!-- <div class="bar bar-item" style="height: 250px;">dfs</div> -->
             </div>
             <hr class="my-5" style="background-color: #000;" />
-            <div class="row">
+
+            <div class="row bubble-description">
                 <div class="col-md-8">
-                    <span class="algorithm-title">Algorithm Name</span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum distinctio soluta facilis
-                    necessitatibus aliquid sed cupiditate debitis obcaecati! Sint temporibus unde ea assumenda, optio
-                    ducimus recusandae dicta architecto facilis vel?
+                    <span class="algorithm-title">Bubble Sort</span>
+                    Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order.The pass through the list is repeated until the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems
                 </div>
                 <div class="col-md-4" style="border-left: 2px solid #ddd;">
                     <span class="algorithm-title">Complexity</span>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi porro similique illum. Aspernatur
-                    animi alias neque omnis consequuntur, natus aut minus totam ipsa deserunt voluptate consequatur
-                    delectus ab ut quasi.
+                    <li class="fw-bold">Worst-case time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Average time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Best-case time complexity : <code class="complexity fw-bold"><span>O(n)</span></code></li>
+                    <li class="fw-bold">Worst-case space complexity : <code class="complexity fw-bold"><span>O(1)</span></code></li>
                 </div>
             </div>
+            <div class="row insertion-description">
+                <div class="col-md-8">
+                    <span class="algorithm-title">Insertion Sort</span>
+                    Insertion Sort is a simple sorting algorithm that iterates through an array and at each iteration it removes one element from the array, finds the location it belongs to in the sorted list and inserts it there, repeating until no elements remain in the unsorted list. It is an in-place, stable sorting algorithm that is inefficient on large input arrays but works well for data sets that are almost sorted. It is more efficient in practice compared to other quadratic sorting algorithms like bubble sort and selection sort.
+                </div>
+                <div class="col-md-4" style="border-left: 2px solid #ddd;">
+                    <span class="algorithm-title">Complexity</span>
+                    <li class="fw-bold">Worst-case time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Average time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Best-case time complexity : <code class="complexity fw-bold"><span>O(n)</span></code></li>
+                    <li class="fw-bold">Worst-case space complexity : <code class="complexity fw-bold"><span>O(1)</span></code></li>
+                </div>
+            </div>
+
+            <div class="row selection-description">
+                <div class="col-md-8">
+                    <span class="algorithm-title">Selection Sort</span>
+                    Selection Sort is an in-place comparison sorting algorithm that divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list. Initially, the sorted sublist is empty and the unsorted sublist is the entire input list. The algorithm proceeds by finding the smallest element in the unsorted sublist, exchanging (swapping) it with the leftmost unsorted element (putting it in sorted order), and moving the sublist boundaries one element to the right.
+                </div>
+                <div class="col-md-4" style="border-left: 2px solid #ddd;">
+                    <span class="algorithm-title">Complexity</span>
+                    <li class="fw-bold">Worst-case time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Average time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Best-case time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Worst-case space complexity : <code class="complexity fw-bold"><span>O(1)</span></code></li>
+                </div>
+            </div>
+
+            <div class="row merge-description">
+                <div class="col-md-8">
+                    <span class="algorithm-title">Merge Sort</span>
+                    Merge Sort is an efficient, stable sorting algorith that makes use of the divide and conquer strategy. Conceptually the algorithm works as follows:
+                    <ol>
+                        <li>
+                            Divide the unsorted list into n sublists, each containing one element(a list of one element is considered sorted)
+                        </li>
+                        <li>
+                            Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This will be the sorted list.
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-md-4" style="border-left: 2px solid #ddd;">
+                    <span class="algorithm-title">Complexity</span>
+                    <li class="fw-bold">Worst-case time complexity : <code class="complexity fw-bold"><span>O(n log n)</span></code></li>
+                    <li class="fw-bold">Average time complexity : <code class="complexity fw-bold"><span>O(n log n)</span></code></li>
+                    <li class="fw-bold">Best-case time complexity : <code class="complexity fw-bold"><span>O(n log n)</span></code></li>
+                    <li class="fw-bold">Worst-case space complexity : <code class="complexity fw-bold"><span>O(n)</span></code></li>
+                </div>
+            </div>
+
+            <div class="row quick-description">
+                <div class="col-md-8">
+                    <span class="algorithm-title">Quick Sort</span>
+                    Quick Sort is an efficient, in-place sorting algorith that in practice is faster than MergeSort and HeapSort. However, it is not a stable sorting algorithm, meaning that the relative positioning of equal sort items is not preserved.Quicksort is a divide and conquer algorithm. Quicksort first divides a large array into two smaller sub-arrays: the low elements and the high elements. Quicksort can then recursively sort the sub-arrays. The steps are:
+                    <ol>
+                        <li>
+                            Pick an element, called a pivot, from the array. This is usually done at random.
+                        </li>
+                        <li>
+                            Move pivot element to the start of the array.
+                        </li>
+                        <li>
+                            Partitioning: reorder the array so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the partition operation.
+                        </li>
+                        <li>
+                            Recursively apply the above steps to the sub-array of elements with smaller values and separately to the sub-array of elements with greater values.
+                        </li>
+                    </ol>
+                    The base case of the recursion is an array of size zero or one, which are sorted by definition.
+                </div>
+                <div class="col-md-4" style="border-left: 2px solid #ddd;">
+                    <span class="algorithm-title">Complexity</span>
+                    <li class="fw-bold">Worst-case time complexity : <code class="complexity fw-bold"><span>O(n<sup>2</sup>)</span></code></li>
+                    <li class="fw-bold">Average time complexity : <code class="complexity fw-bold"><span>O(n log n)</span></code></li>
+                    <li class="fw-bold">Best-case time complexity : <code class="complexity fw-bold"><span>O(n log n)</span></code></li>
+                    <li class="fw-bold">Worst-case space complexity : <code class="complexity fw-bold"><span>O(log n)</span></code></li>
+                </div>
+            </div>
+            <footer class="bg-info mt-3">
+                <p class="text-center py-2 m-0 fw-bold">Develop with Love by : <a style="text-decoration: none;" href="https://github.com/dev-ASHANAUR" target="_blank">Md.Ashanaur Rahman</a></p>
+            </footer>
         </div>
     </div>
 

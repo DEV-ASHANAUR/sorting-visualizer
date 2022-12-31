@@ -312,6 +312,25 @@ body {
     -webkit-text-fill-color: transparent;
     display: block;
 }
+.complexity {
+    font-size: 1.1rem;
+    color: red;
+}
+/* .bubble-description{
+    display: none;
+}
+.insertion-description{
+    display: none;
+}
+.selection-description{
+    display: none;
+}
+.merge-description{
+    display: none;
+}
+.quick-description{
+    display: none;
+} */
 
 /* === Main Content with bars end ===== */
 
