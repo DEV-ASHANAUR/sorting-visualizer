@@ -41,7 +41,9 @@ start.addEventListener("click",async()=>{
             resetBtn();
             break;
         case "quick":
-            console.log("quick");
+            await quickSortDriver();
+            enable();
+            resetBtn();
             break;
         default:
             break;
